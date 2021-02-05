@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Homework 10 TS UserList</title>
+
+    <!-- Boostrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <form name="add-user-form" novalidate>
+                    <div class="form-group">
+                        <label for="inputLogin">Login</label>
+                        <input type="text" class="form-control" id="inputLogin" placeholder="Enter login"
+                            pattern="^[a-zA-Z]{4,16}$" required>
+                        <div class="invalid-feedback">
+                            Invalid value!
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Enter password"
+                            pattern="^(\w|[-_.]){4,16}$" required>
+                        <div class="invalid-feedback">
+                            Invalid value!
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter email"
+                            pattern="^[\w.-]+@\w+\.\w{2,3}$" required>
+                        <div class="invalid-feedback">
+                            Invalid value!
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-success btn-add-user mt-4">Add User</button>
+                </form>
+            </div>
+            <div class="col-7">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Login</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
